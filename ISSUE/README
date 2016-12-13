@@ -1,0 +1,28 @@
+프로젝트명 : ISSUE
+제작일 : 2016. 12. 13
+제작자 : 김연왕, 안효상
+취지 : 본 프로젝트는 이슈관련 게시판 프로젝트이다.
+
+개발환경 : 개발환경은 다음과 같다. 
+	Utils : apache-tomcat-8.5.9
+			apache-maven-3.1.0
+			jdk1.8.0_91.jdk
+			Lombok 설치(예정)
+			
+	Lang : 	java, js, html, css, jquery, hibernate, backbone, requirejs, hogan or masutache, spring framework, 
+
+	Tool : spring-tool-suite-3.8.2.RELEASE-e4.6.1-macosx-cocoa-x86_64(각자 알아서)
+
+	DB : PostgresApp contains PostgreSQL 9.6.1 or mysql or oracle??
+
+	HostingServer : Google Cloud Platform / IaaS or PaaS (예정)
+	
+프로젝트 설정
+1. Project Charset 확인
+	Project 우클릭 -> Properties -> Resource -> Text file encoding [ UTF-8 ] 인지 확인. charset이 안맞으면 IDE LOMBOK이 오류납니다.
+
+	
+	
+우선적으로 생각나는것 적어봤습니다.
+
+이후 내용은 많이 바뀔수 있으므로 숙지하시면 될거 같습니다.
