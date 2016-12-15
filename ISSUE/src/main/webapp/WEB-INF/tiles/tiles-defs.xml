@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+       <!-- 타일즈 루트 레이아웃  -->
+<tiles-definitions>
+ <definition name=".root" template="/WEB-INF/views/layouts/comm/layout.jsp">
+  <put-attribute name="header" value="/WEB-INF/views/layouts/comm/header.jsp" />
+  <put-attribute name="leftmenu" value="/WEB-INF/views/layouts/comm/leftmenu.jsp" />
+  <put-attribute name="content" value="/WEB-INF/views/layouts/comm/content.jsp" />
+  <put-attribute name="footer" value="/WEB-INF/views/layouts/comm/footer.jsp" />
+ </definition> 
+
+<!-- 컨트롤러 리턴 매핑 -->
+ <definition name="main" extends=".root">
+ <put-attribute name="content" value="/WEB-INF/views/jspf/home.jsp" />
+ </definition>
+ 
+</tiles-definitions>

@@ -21,8 +21,14 @@
 1. Project Charset 확인
 	Project 우클릭 -> Properties -> Resource -> Text file encoding [ UTF-8 ] 인지 확인. charset이 안맞으면 IDE LOMBOK이 오류납니다.
 
-	
-	
+개발 규칙	
+
+// 2016-12-15
+CRUD 즉, 한페이지 안에서 컨트롤러,서비스,jsp,js 같은 파일들은 이름을 똑같도록 할것 
+예를들면 main.do를 이용해 이동하는 페이지의 경우는 mainController.java,main.jsp,main.js,mainService.java 이런식임
+컨트롤+쉬프트+R을이용해 파일검색할경우 main키워드 하나로 main에 관련된 파일들이 바로나와야됨
+
+-------------------------------------	
 우선적으로 생각나는것 적어봤습니다.
 
 이후 내용은 많이 바뀔수 있으므로 숙지하시면 될거 같습니다.
