@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+	pageEncoding="EUC-KR"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,11 +8,19 @@
 <title>issue</title>
 </head>
 <body>
- <div ><tiles:insertAttribute name="header" /></div>
- <div>
-     <div><tiles:insertAttribute name="leftmenu"  /></div>
-     <div><tiles:insertAttribute name="content"  /></div>
- </div>
- <div><tiles:insertAttribute name="footer" /></div>
+	<div>
+		<tiles:insertAttribute name="header" />
+	</div>
+	<div>
+		<div>
+			<tiles:insertAttribute name="leftmenu" />
+		</div>
+		<div>
+			<tiles:insertAttribute name="content" />
+		</div>
+	</div>
+	<div>
+		<tiles:insertAttribute name="footer" />
+	</div>
 </body>
 </html>
