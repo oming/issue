@@ -36,4 +36,22 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 
+	<!-- add by hsan for Error 페이지 추가  -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/common/error/error404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/common/error/error403.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/common/error/error500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>501</error-code>
+		<location>/common/error/error501.jsp</location>
+	</error-page>
+
 </web-app>
