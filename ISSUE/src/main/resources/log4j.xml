@@ -9,27 +9,55 @@
 			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
 		</layout>
 	</appender>
-	
+
+	<!-- error 전용 어팬더 추가 -->
+	<appender name="errorsLog" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="ERROR" />
+		<param name="File" value="${log.base}/go_user/errors" />
+		<param name="Encoding" value="UTF-8" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'_'yyyyMMdd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p: %c - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="statusChangedLog" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${log.base}/go_user/httpstatuschanged" />
+		<param name="Encoding" value="UTF-8" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'_'yyyyMMdd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p: %m%n" />
+		</layout>
+	</appender>
+
+
 	<!-- Application Loggers -->
 	<logger name="com.kingan.issue">
 		<level value="info" />
+		<appender-ref ref="statusChangedLog" />
 	</logger>
-	
+
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />
+		<appender-ref ref="statusChangedLog" />
 	</logger>
-	
+
 	<logger name="org.springframework.beans">
 		<level value="info" />
+		<appender-ref ref="statusChangedLog" />
 	</logger>
-	
+
 	<logger name="org.springframework.context">
 		<level value="info" />
+		<appender-ref ref="statusChangedLog" />
 	</logger>
 
 	<logger name="org.springframework.web">
 		<level value="info" />
+		<appender-ref ref="statusChangedLog" />
 	</logger>
 
 	<!-- Root Logger -->
@@ -37,5 +65,5 @@
 		<priority value="warn" />
 		<appender-ref ref="console" />
 	</root>
-	
+
 </log4j:configuration>
